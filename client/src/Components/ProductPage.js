@@ -22,18 +22,20 @@ class ProductPage extends Component {
     });
   };
   updateData = (pathname) => {
-    axios
-      .get('/api/' + pathname)
-      .then((res) => {
-        this.setState({
-          product: res.data,
-          clicked: '/' + res.data.imagePaths[0],
-          quantity: 1,
+    if (pathname.includes('/product/')) {
+      axios
+        .get('/api' + pathname)
+        .then((res) => {
+          this.setState({
+            product: res.data,
+            clicked: '/' + res.data.imagePaths[0],
+            quantity: 1,
+          });
+        })
+        .catch((err) => {
+          console.log(err);
         });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    }
   };
 
   changeQuantity = (operation) => {

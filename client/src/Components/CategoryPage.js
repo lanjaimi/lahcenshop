@@ -12,16 +12,18 @@ class CategoryPage extends Component {
   }
 
   updateData = (pathname) => {
-    axios
-      .get('/api' + pathname)
-      .then((res) => {
-        this.setState({
-          result: res.data,
+    if (pathname.includes('/category')) {
+      axios
+        .get('/api' + pathname)
+        .then((res) => {
+          this.setState({
+            result: res.data,
+          });
+        })
+        .catch((err) => {
+          console.log(err);
         });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    }
   };
 
   componentWillMount() {

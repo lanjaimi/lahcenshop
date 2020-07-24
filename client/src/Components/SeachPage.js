@@ -13,18 +13,17 @@ class SearchPage extends Component {
   }
 
   updateData = (pathname, search) => {
-    console.log('/api' + pathname + search);
-
-    axios
-      .get('/api' + pathname + search)
-      .then((res) => {
-        this.setState({
-          result: res.data,
+    if (pathname.includes('/search'))
+      axios
+        .get('/api' + pathname + search)
+        .then((res) => {
+          this.setState({
+            result: res.data,
+          });
+        })
+        .catch((err) => {
+          console.log(err);
         });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
   };
 
   componentWillMount() {
