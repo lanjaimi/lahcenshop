@@ -13,6 +13,8 @@ class SearchPage extends Component {
   }
 
   updateData = (pathname, search) => {
+    console.log('/api' + pathname + search);
+
     axios
       .get('/api' + pathname + search)
       .then((res) => {
