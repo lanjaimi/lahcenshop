@@ -37,14 +37,12 @@ export default class ShoppigCart extends Component {
         </div>
       );
 
-    console.log(this.props.items);
-
     let boxs = this.props.items.map((item, index) => {
       let imgSrc = item.imagePaths[0];
 
       return (
-        <Link to={'/product/' + item._id}>
-          <div key={index} className='shopping_cart'>
+        <Link key={index} to={'/product/' + item._id}>
+          <div className='shopping_cart'>
             <img className='image' src={imgSrc} alt='product' />
             <h4 className='title'>{item.title}</h4>
             <div className='price'>
