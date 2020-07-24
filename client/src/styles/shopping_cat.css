@@ -1,0 +1,87 @@
+.shopping_cart {
+  position: relative;
+  padding: 10px;
+  height: 200px;
+  cursor: pointer;
+  margin: 5px 0;
+  background-color: rgb(243, 239, 239);
+}
+.shopping_cart:hover {
+  opacity: 0.9;
+  background-color: rgb(228, 226, 226);
+}
+
+.shopping_cart .image {
+  height: 100%;
+  max-width: 200px;
+  display: inline-block;
+}
+.shopping_cart a {
+  color: rgb(61, 61, 61);
+}
+
+.shopping_cart a:hover {
+  text-decoration: none;
+}
+
+.shopping_cart .title {
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+  left: 220px;
+  color: rgb(61, 61, 61);
+}
+.shopping_cart .price {
+  display: inline-block;
+  position: absolute;
+  font-size: 20px;
+  top: 70px;
+  left: 220px;
+  color: rgb(61, 61, 61);
+}
+
+.shopping_cart .shipping {
+  display: inline-block;
+  position: absolute;
+  font-size: 20px;
+  top: 150px;
+  left: 220px;
+  color: rgb(61, 61, 61);
+}
+.shopping_cart .quantity {
+  display: inline-block;
+  position: absolute;
+  font-size: 20px;
+  top: 110px;
+  left: 220px;
+  color: rgb(61, 61, 61);
+}
+.shopping_cart .shipping span {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.shopping_cart .quantity span {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.total_box {
+  background-color: rgb(47, 153, 47);
+  padding: 20px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.total_box h4 {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.total_box .total {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 600;
+}

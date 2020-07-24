@@ -1,0 +1,129 @@
+.product_info {
+  padding: 20px;
+  position: relative;
+}
+
+.product_page .title {
+  text-transform: capitalize;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.product_info .price {
+  text-transform: capitalize;
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 600;
+  color: #df3333;
+  margin: 20px 0;
+}
+
+.product_info .label {
+  text-transform: capitalize;
+  display: inline-block;
+  font-size: 17px;
+  margin-bottom: 5px;
+  border-bottom: 1px dashed #f06060;
+  font-weight: 600;
+}
+
+.product_info .body {
+  line-height: 1.5;
+}
+
+.product_info .box {
+  position: relative;
+}
+
+.product_info .to_cart_btn {
+  padding: 7px 20px;
+  background-color: white;
+  border: 1px solid #eb4d4d;
+  color: #f06060;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  position: absolute;
+  left: 200px;
+  top: 20px;
+}
+.product_info .to_cart_btn:hover {
+  background-color: #f06060;
+  color: white;
+}
+
+.product_info .to_cart_btn:hover {
+  opacity: 0.8;
+}
+.photo_gallery {
+  position: relative;
+  z-index: 200;
+}
+
+.js-image-zoom__zoomed-image {
+  left: 20px !important;
+  z-index: 200;
+  border: 1px solid black;
+}
+
+.small_images img {
+  width: 70px;
+  height: 70px;
+  margin: 20px;
+  display: block;
+  cursor: pointer;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.selected {
+  box-shadow: 1px 1px 4px rgb(212, 72, 72);
+  border: 1p solid rgb(212, 72, 72);
+}
+
+.js_z {
+  top: 20px;
+  cursor: zoom-in;
+}
+
+.product_info .description {
+  margin-top: 40px;
+}
+
+.description .label {
+  font-weight: 600;
+  font-size: 20px;
+  padding: 5px 0px;
+}
+
+.quantity .result {
+  display: inline-block;
+  background-color: transparent;
+  font-size: 23px;
+  margin: 7px;
+}
+
+.quantity .controller {
+  color: rgb(128, 0, 107);
+  display: inline-block;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 3px;
+  width: 30px;
+  text-align: center;
+  border-radius: 100%;
+}
+.quantity .controller:hover {
+  color: white;
+  background-color: #f06060;
+}
+
+.quantity_label {
+  color: rgb(128, 0, 107);
+  display: inline-block;
+  margin-right: 25px;
+  font-size: 18px;
+  font-weight: 600;
+}

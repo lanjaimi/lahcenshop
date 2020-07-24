@@ -1,0 +1,21 @@
+.big_slider {
+  overflow: hidden;
+}
+
+.big_slider .slick-prev {
+  left: 5px;
+  z-index: 99;
+}
+
+.big_slider .slick-next {
+  right: 5px;
+  z-index: 99;
+}
+
+.big_slider a {
+  color: black;
+}
+
+.big_slider a:hover {
+  text-decoration: none;
+}

@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.appBody {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.big_slider_image {
+  z-index: 105;
+}
+
+.search_error {
+  padding: 20px;
+  margin: 30px 0;
+  font-size: 25px;
+}
+.no_items_msg {
+  text-align: center;
+  padding: 20px;
+  margin-top: 100px;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+@media only screen and (max-width: 850px) {
+  .navbar .logo_wrapper {
+    display: none;
+  }
+
+  .burger_warpper,
+  .cart {
+    display: none;
+  }
+
+  .navbar .search_box {
+    width: 50vw;
+  }
+  .product_slider,
+  .big_slider {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .elements {
+    display: none;
+  }
+}

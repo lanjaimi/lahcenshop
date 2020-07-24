@@ -1,0 +1,189 @@
+.navbar_wrapper {
+  background: #ff416c;
+  background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+}
+
+.navbar {
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+  height: 80px;
+}
+
+.navbar .logo_wrapper {
+  padding: 10px 20px;
+  min-width: 200px;
+  cursor: pointer;
+}
+
+.navbar .logo {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.box-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.search_icon {
+  display: inline;
+  color: white;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  font-size: 20px;
+}
+
+.search_box {
+  padding: 10px;
+  border-color: transparent;
+  padding-left: 50px;
+  background-color: #e03128;
+  color: #fff;
+}
+.search_box {
+  width: 300px;
+}
+.search_box::placeholder {
+  color: #fff;
+}
+.search_box::placeholder {
+  color: #fff;
+}
+
+.search_box:focus {
+  outline: none;
+}
+
+.search_box {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-right: 2px;
+}
+
+.go_btn a {
+  color: #fff;
+  margin-left: 2px;
+  font-size: 18px;
+  padding: 13px;
+  position: relative;
+  top: 1px;
+  background-color: #e03128;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+}
+
+.go_btn a:hover {
+  text-decoration: none;
+}
+
+.search_warpper {
+  display: inline;
+  box-sizing: content-box;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.navbar .burger_warpper {
+  position: absolute;
+  right: 55px;
+  bottom: 15px;
+}
+
+.navbar .burger_menu {
+  color: white;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+.navbar .cart {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  bottom: 19px;
+}
+
+.burger_menu:hover,
+.cart:hover {
+  opacity: 0.8;
+}
+
+.navbar .add_product {
+  position: absolute;
+  cursor: pointer;
+  background-color: black;
+  padding: 10px 20px;
+  font-weight: 600;
+  color: #fff;
+  bottom: -40px;
+  right: 0;
+  z-index: 99;
+}
+
+.navbar .add_product a {
+  color: white;
+}
+.navbar .add_product a:hover {
+  text-decoration: none;
+}
+.go_btn:hover {
+  opacity: 0.8;
+}
+
+.elements {
+  text-align: center;
+  margin: 10px 0px;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.item {
+  padding: 5px 10px;
+  cursor: pointer;
+  text-align: center;
+  color: rgb(63, 63, 63);
+  border-right: 1px dashed rgb(204, 203, 203);
+  box-sizing: border-box;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.navbar .cart {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  bottom: 19px;
+}
+
+.item:hover {
+  background-color: rgb(233, 233, 233);
+}
+
+.notification {
+  color: white;
+  background-color: #041f60;
+  position: absolute;
+  font-size: 15px;
+  font-weight: 600;
+  top: -15px;
+  right: 0px;
+  padding: 0 7px;
+  border-radius: 100%;
+}
+
+.cart .icon {
+  font-size: 23px;
+}
+
+.cart a {
+  color: white;
+}
