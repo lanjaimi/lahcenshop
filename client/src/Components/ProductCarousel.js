@@ -21,7 +21,6 @@ class ProductCarousel extends Component {
         this.setState({
           result: res.data,
         });
-        console.log(this.state.result);
       })
       .catch((err) => {
         console.log(err);
