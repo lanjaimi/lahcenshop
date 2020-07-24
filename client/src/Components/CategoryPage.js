@@ -13,6 +13,7 @@ class CategoryPage extends Component {
 
   updateData = (pathname) => {
     if (pathname.includes('/category')) {
+      console.log('/api' + pathname);
       axios
         .get('/api' + pathname)
         .then((res) => {
