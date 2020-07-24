@@ -13,7 +13,7 @@ class CategoryPage extends Component {
 
   updateData = (pathname) => {
     axios
-      .get('/api/' + pathname)
+      .get('/api' + pathname)
       .then((res) => {
         this.setState({
           result: res.data,

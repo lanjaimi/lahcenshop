@@ -14,7 +14,7 @@ class SearchPage extends Component {
 
   updateData = (pathname, search) => {
     axios
-      .get('/api/' + pathname + search)
+      .get('/api' + pathname + search)
       .then((res) => {
         this.setState({
           result: res.data,
