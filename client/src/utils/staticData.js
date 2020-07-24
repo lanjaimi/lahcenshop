@@ -49,9 +49,8 @@ export const carouselCotent = [
     color3: 'red3',
   },
   {
-    heading: 'Last slide',
-    subHeading:
-      'you can add more slides easily by adding more data to the prop the carousel receives. All components are reusable ',
+    heading: "Don't forget",
+    subHeading: 'Click the menu button to add more products to the site ',
     callToAct: 'click !!',
     callToActCat: categoryNames[Math.floor(Math.random() * 13)],
     category1: null,

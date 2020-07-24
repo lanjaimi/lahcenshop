@@ -67,18 +67,21 @@
 }
 
 .add_item .submit {
-  display: inline-block;
+  display: block;
   font-size: 18px;
   font-weight: 600;
-  padding: 5px 20px;
+  padding: 8px 20px;
   border: 1px solid rgb(233, 85, 85);
   color: rgb(233, 85, 85);
   border-radius: 5px;
   margin-top: 30px;
   cursor: pointer;
+  text-align: center;
+  max-width: 50vw !important;
 }
 .add_item .submit:hover {
-  background-color: rgb(238, 170, 170);
+  background-color: rgb(175, 23, 23);
+  color: white;
 }
 
 .add_item .cat {
@@ -194,14 +197,13 @@
   width: 100px;
   display: inline-block;
   margin: 10px 0;
-  animation: shake 0.5s infinite;
 }
 
 .image_box .single_image img {
   height: 100%;
   width: 100%;
   display: inline-block;
-  box-shadow: -4px 3px 15px -5px #3d48db;
+  box-shadow: -4px 3px 15px -5px #d1d1d1;
 }
 
 .add_item .delete_btn {
@@ -223,17 +225,27 @@
 }
 
 .add_item .view {
-  text-align: center;
+  display: block;
   font-size: 18px;
   font-weight: 600;
-  padding: 5px 20px;
-  background-color: #175825;
-  color: #ffffff;
+  padding: 8px 20px;
+  border: 1px solid rgb(21, 61, 21);
+  color: rgb(40, 107, 14);
   border-radius: 5px;
-  margin: 30px 20px;
+  margin-top: 30px;
   cursor: pointer;
+  text-align: center;
+  max-width: 50vw !important;
 }
 
+.add_item .view:hover {
+  background-color: rgb(40, 107, 14);
+  color: white;
+}
+
+.add_item .view a {
+  text-decoration: none;
+}
 @keyframes shake {
   25% {
     transform: rotate(1deg);

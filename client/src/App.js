@@ -23,7 +23,12 @@ class App extends Component {
 
   addToCart = (item, quantity) => {
     for (let i = 0; i < this.state.cart.length; i++) {
-      if (this.state.cart[i]._id === item._id) return;
+      if (this.state.cart[i]._id === item._id) {
+        this.setState({
+          added: '',
+        });
+        return;
+      }
     }
 
     console.log('added');
@@ -36,6 +41,7 @@ class App extends Component {
 
     this.setState({
       cart: newCart,
+      added: 'added',
     });
   };
 
@@ -90,12 +96,7 @@ class App extends Component {
               exact
               path='/product/:id'
               render={(props) => (
-                <ProductPage
-                  addToCart={this.addToCart}
-                  startIndex={6}
-                  endIndex={12}
-                  {...props}
-                />
+                <ProductPage addToCart={this.addToCart} {...props} />
               )}
             />
             <Route

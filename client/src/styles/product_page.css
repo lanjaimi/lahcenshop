@@ -57,6 +57,7 @@
 .product_info .to_cart_btn:hover {
   opacity: 0.8;
 }
+
 .photo_gallery {
   position: relative;
   z-index: 200;

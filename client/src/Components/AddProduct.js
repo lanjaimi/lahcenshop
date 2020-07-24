@@ -22,6 +22,7 @@ class AddItem extends Component {
       dropdown: 'hide',
       rotate: '',
       success: 'hide',
+      submit: 'show',
       error: {
         msg: '',
         display: 'hide',
@@ -143,7 +144,7 @@ class AddItem extends Component {
         });
         return false;
 
-      case isNaN(price) || price === '':
+      case isNaN(price) || price === '' || price.includes(' '):
         this.setState({
           error: {
             msg: 'The price must be a Number!!',
@@ -207,6 +208,7 @@ class AddItem extends Component {
             category: 'Select Category',
             description: '',
             _id: res.data._id,
+            submit: 'hide',
             error: {
               msg: '',
               display: 'hide',
@@ -318,7 +320,7 @@ class AddItem extends Component {
           <div className={`view ${this.state.success}`}>View your product</div>
         </Link>
 
-        <div className='submit' onClick={this.submit}>
+        <div className={`submit ${this.state.submit}`} onClick={this.submit}>
           Submit
         </div>
       </div>
