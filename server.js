@@ -9,7 +9,7 @@ const randomRouter = require('./routes/random');
 const mongoose = require('mongoose');
 const path = require('path');
 
-const url = 'mongodb://127.0.0.1:27017/market_place';
+const url = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/market_place';
 
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
