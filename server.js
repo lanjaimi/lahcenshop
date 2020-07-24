@@ -33,10 +33,6 @@ app.use('/api/search', searchRouter);
 app.use('/api/latest', latestRouter);
 app.use('/api/random', randomRouter);
 
-app.get('/', (req, res) => {
-  res.send(' backend is working');
-});
-
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 
