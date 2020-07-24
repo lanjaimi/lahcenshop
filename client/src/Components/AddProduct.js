@@ -132,7 +132,7 @@ class AddItem extends Component {
             display: 'show',
           },
         });
-        break;
+        return false;
 
       case title.length < 10:
         this.setState({
@@ -141,7 +141,8 @@ class AddItem extends Component {
             display: 'show',
           },
         });
-        break;
+        return false;
+
       case isNaN(price) || price === '':
         this.setState({
           error: {
@@ -149,7 +150,7 @@ class AddItem extends Component {
             display: 'show',
           },
         });
-        break;
+        return false;
       case category === 'Select Category':
         this.setState({
           error: {
@@ -157,7 +158,7 @@ class AddItem extends Component {
             display: 'show',
           },
         });
-        break;
+        return false;
       case description.length < 20:
         this.setState({
           error: {
@@ -165,46 +166,57 @@ class AddItem extends Component {
             display: 'show',
           },
         });
-        break;
+        return false;
       default:
-        return;
+        return true;
     }
   };
 
   submit = () => {
-    this.checkErrors();
-    const { title, price, category, description, uploadedImages } = this.state;
-    let product = new FormData();
+    if (this.checkErrors()) {
+      const {
+        title,
+        price,
+        category,
+        description,
+        uploadedImages,
+      } = this.state;
+      let product = new FormData();
 
-    product.append('title', title);
-    product.append('price', price);
-    product.append('category', category);
-    product.append('description', description);
+      product.append('title', title);
+      product.append('price', price);
+      product.append('category', category);
+      product.append('description', description);
 
-    for (let i = 0; i < uploadedImages.length; i++) {
-      product.append(`uploadedImages`, uploadedImages[i]);
-    }
+      for (let i = 0; i < uploadedImages.length; i++) {
+        product.append(`uploadedImages`, uploadedImages[i]);
+      }
 
-    axios
-      .post('/api/product', product)
-      .then((res) => {
-        console.log(res.data._id);
-        this.setState({
-          dropdown: 'hide',
-          rotate: '',
-          success: 'show',
-          images: [],
-          uploadedImages: [],
-          title: '',
-          price: '',
-          category: 'Select Category',
-          description: '',
-          _id: res.data._id,
+      axios
+        .post('/api/product', product)
+        .then((res) => {
+          console.log(res.data._id);
+          this.setState({
+            dropdown: 'hide',
+            rotate: '',
+            success: 'show',
+            images: [],
+            uploadedImages: [],
+            title: '',
+            price: '',
+            category: 'Select Category',
+            description: '',
+            _id: res.data._id,
+            error: {
+              msg: '',
+              display: 'hide',
+            },
+          });
+        })
+        .catch((err) => {
+          console.log(err);
         });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    }
   };
 
   render() {

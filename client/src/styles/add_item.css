@@ -16,6 +16,7 @@
   padding: 5px;
   font-weight: 600;
   transform: translateX(-50%);
+  z-index: 200;
 }
 
 .add_item .title span {
