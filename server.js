@@ -9,6 +9,15 @@ const randomRouter = require('./routes/random');
 const mongoose = require('mongoose');
 const path = require('path');
 
+/// bucketeer config
+
+process.env.AWS_ACCESS_KEY_ID = process.env.BUCKETEER_AWS_ACCESS_KEY_ID;
+process.env.AWS_SECRET_ACCESS_KEY = process.env.BUCKETEER_AWS_SECRET_ACCESS_KEY;
+process.env.AWS_REGION = 'us-east-1';
+
+var AWS = require('aws-sdk');
+var s3 = new AWS.S3();
+
 const url = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/market_place';
 
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
