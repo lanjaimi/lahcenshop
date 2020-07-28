@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.5a3c4a4c.chunk.css",
-    "main.js": "/static/js/main.a65643a8.chunk.js",
-    "main.js.map": "/static/js/main.a65643a8.chunk.js.map",
+    "main.js": "/static/js/main.0b0da79d.chunk.js",
+    "main.js.map": "/static/js/main.0b0da79d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.09b85ec0.js",
     "runtime-main.js.map": "/static/js/runtime-main.09b85ec0.js.map",
     "static/css/2.667e231a.chunk.css": "/static/css/2.667e231a.chunk.css",
     "static/js/2.2e97c4e4.chunk.js": "/static/js/2.2e97c4e4.chunk.js",
     "static/js/2.2e97c4e4.chunk.js.map": "/static/js/2.2e97c4e4.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.5d18bd95f1962aa31d52b6f9b0d95d0d.js": "/precache-manifest.5d18bd95f1962aa31d52b6f9b0d95d0d.js",
+    "precache-manifest.53a83b86da41b2c8645dc4a5a767a30e.js": "/precache-manifest.53a83b86da41b2c8645dc4a5a767a30e.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.667e231a.chunk.css.map": "/static/css/2.667e231a.chunk.css.map",
     "static/css/main.5a3c4a4c.chunk.css.map": "/static/css/main.5a3c4a4c.chunk.css.map",
@@ -31,7 +31,7 @@
     "static/media/iphone.png": "/static/media/iphone.1c5d36ba.png",
     "static/media/laptop.png": "/static/media/laptop.4fe14519.png",
     "static/media/logo_green.png": "/static/media/logo_green.4bd66cd7.png",
-    "static/media/logo_white.png": "/static/media/logo_white.746c2e6a.png",
+    "static/media/logo_white.png": "/static/media/logo_white.073da206.png",
     "static/media/phone.png": "/static/media/phone.519520a1.png",
     "static/media/slick-theme.css": "/static/media/slick.f97e3bbf.svg",
     "static/media/surf.png": "/static/media/surf.839b2d7e.png",
@@ -42,6 +42,6 @@
     "static/css/2.667e231a.chunk.css",
     "static/js/2.2e97c4e4.chunk.js",
     "static/css/main.5a3c4a4c.chunk.css",
-    "static/js/main.a65643a8.chunk.js"
+    "static/js/main.0b0da79d.chunk.js"
   ]
 }
