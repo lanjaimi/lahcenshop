@@ -11,14 +11,12 @@ const path = require('path');
 
 /// bucketeer config
 
-process.env.AWS_ACCESS_KEY_ID = process.env.BUCKETEER_AWS_ACCESS_KEY_ID;
-process.env.AWS_SECRET_ACCESS_KEY = process.env.BUCKETEER_AWS_SECRET_ACCESS_KEY;
-process.env.AWS_REGION = 'us-east-1';
+//mongodb+srv://lahcen:<password>@devconnector-t8z8k.mongodb.net/<dbname>?retryWrites=true&w=majority
 
-var AWS = require('aws-sdk');
-var s3 = new AWS.S3();
-
-const url = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/market_place';
+//const url = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/market_place';
+const url =
+  process.env.MONGODB_URI ||
+  'mongodb+srv://lahcen:246810@devconnector-t8z8k.mongodb.net/<dbname>?retryWrites=true&w=majority';
 
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
