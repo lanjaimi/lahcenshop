@@ -11,7 +11,9 @@ router.get('/:category', async (req, res) => {
       }
 
       if (data) {
-        res.status(200).json(data);
+        let catName = req.params.category;
+
+        res.status(200).json({ data, catName });
       }
     });
   } catch (err) {

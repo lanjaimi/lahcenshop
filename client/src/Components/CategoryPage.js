@@ -8,6 +8,7 @@ class CategoryPage extends Component {
 
     this.state = {
       result: null,
+      catName: '',
     };
   }
 
@@ -17,7 +18,8 @@ class CategoryPage extends Component {
         .get('/api' + pathname)
         .then((res) => {
           this.setState({
-            result: res.data,
+            result: res.data.data,
+            catName: res.data.catName,
           });
         })
         .catch((err) => {
@@ -44,6 +46,8 @@ class CategoryPage extends Component {
 
     return (
       <div className='countainer'>
+        <div className='product_page_header'>{this.state.catName}</div>
+
         <div className='row'>{products}</div>
       </div>
     );

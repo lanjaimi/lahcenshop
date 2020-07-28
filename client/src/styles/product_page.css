@@ -3,6 +3,16 @@
   position: relative;
 }
 
+.product_page_header {
+  font-size: 23px;
+  max-width: 150px;
+  font-weight: 600;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  margin: 20px;
+  border-bottom: 1px solid grey;
+}
+
 .product_page .title {
   text-transform: capitalize;
   font-size: 23px;
