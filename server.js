@@ -26,7 +26,7 @@ db.on('error', (err) => {
 app.use(helmet());
 app.use(express.json({ extended: false }));
 app.use(express.urlencoded({ extended: false }));
-app.use('/uploads', express.static('uploads'));
+app.use('/public/uploads', express.static('public/uploads'));
 app.use('/api/product', productRouter);
 app.use('/api/category', categoryRouter);
 app.use('/api/search', searchRouter);
