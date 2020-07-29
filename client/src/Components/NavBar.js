@@ -74,7 +74,7 @@ class NavBar extends Component {
               </div>
 
               <span className='go_btn'>
-                <a href={'/search/d?query=' + this.state.input}>Go</a>
+                <a href={'/search?q=' + this.state.input}>Go</a>
               </span>
             </div>
             <div className='burger_warpper'>

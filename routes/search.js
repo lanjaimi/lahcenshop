@@ -2,11 +2,11 @@ var express = require('express');
 var router = express.Router();
 const Product = require('../models/Product');
 
-router.get('/:query', async (req, res) => {
+router.get('/search', async (req, res) => {
   try {
     await Product.find(
       {
-        title: { $regex: req.query.query, $options: 'i' },
+        title: { $regex: req.query.q, $options: 'i' },
       },
       (err, result) => {
         if (err) console.log(err);

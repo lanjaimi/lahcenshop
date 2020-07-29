@@ -13,9 +13,10 @@ class SearchPage extends Component {
   }
 
   componentDidMount() {
-    const searchQuery = this.props.location.search.replace('?query=', '');
+    const searchQuery = this.props.location.search.replace('?q=', '');
+
     axios
-      .get('/api/' + this.props.location.pathname + this.props.location.search)
+      .get(this.props.location.pathname + this.props.location.search)
       .then((res) => {
         this.setState({
           result: res.data,
@@ -28,7 +29,6 @@ class SearchPage extends Component {
   }
 
   render() {
-    console.log(this.state.result);
     if (this.state.result.length === 0) {
       return (
         <Fragment>
