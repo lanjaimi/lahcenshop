@@ -4,11 +4,9 @@ const Product = require('../models/Product');
 
 router.get('/:query', async (req, res) => {
   try {
-    const serachTerm = req.query.query.replace(/[^A-Za-z0-9 -]/g, '');
-
     await Product.find(
       {
-        title: { $regex: serachTerm, $options: 'i' },
+        title: { $regex: req.query.query, $options: 'i' },
       },
       (err, result) => {
         if (err) console.log(err);

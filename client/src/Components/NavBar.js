@@ -15,6 +15,7 @@ class NavBar extends Component {
     super();
     this.state = {
       menuDisplay: 'hide',
+      input: '',
     };
   }
 
@@ -40,11 +41,11 @@ class NavBar extends Component {
   render() {
     let categories = categoryNames.map((cat, index) => {
       return (
-        <Link key={index} to={'/category/' + cat}>
+        <a key={index} href={'/category/' + cat}>
           <div key={index} className='item '>
             {cat}
           </div>
-        </Link>
+        </a>
       );
     });
     return (
@@ -73,7 +74,7 @@ class NavBar extends Component {
               </div>
 
               <span className='go_btn'>
-                <Link to={'/search/d?query=' + this.state.input}>Go</Link>
+                <a href={'/search/d?query=' + this.state.input}>Go</a>
               </span>
             </div>
             <div className='burger_warpper'>

@@ -45,7 +45,7 @@ class ProductCarousel extends Component {
       let imgSrc = '/' + product.imagePaths[0];
       return (
         <div key={index} className='product'>
-          <Link to={'/product/' + product._id}>
+          <a href={'/product/' + product._id}>
             <div className='image'>
               <img src={imgSrc} alt='product' />
             </div>
@@ -55,7 +55,7 @@ class ProductCarousel extends Component {
             </h2>
             <span className='price'>${product.price}</span>
             <span className='shipping'>Free Shipping</span>
-          </Link>
+          </a>
         </div>
       );
     });

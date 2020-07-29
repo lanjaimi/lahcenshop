@@ -12,30 +12,19 @@ class CategoryPage extends Component {
     };
   }
 
-  updateData = (pathname) => {
-    if (pathname.includes('/category')) {
-      axios
-        .get('/api' + pathname)
-        .then((res) => {
-          this.setState({
-            result: res.data.data,
-            catName: res.data.catName,
-          });
-        })
-        .catch((err) => {
-          console.log(err);
+  componentDidMount() {
+    axios
+      .get('/api' + this.props.location.pathname)
+      .then((res) => {
+        this.setState({
+          result: res.data.data,
+          catName: res.data.catName,
         });
-    }
-  };
-
-  componentWillMount() {
-    this.unlisten = this.props.history.listen((location, action) => {
-      this.updateData(location.pathname);
-    });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
-  componentDidMount = () => {
-    this.updateData(this.props.location.pathname);
-  };
 
   render() {
     if (this.state.result === null) return <div />;

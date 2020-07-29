@@ -21,22 +21,21 @@ class ProductPage extends Component {
       clicked: src,
     });
   };
-  updateData = (pathname) => {
-    if (pathname.includes('/product/')) {
-      axios
-        .get('/api' + pathname)
-        .then((res) => {
-          this.setState({
-            product: res.data,
-            clicked: '/' + res.data.imagePaths[0],
-            quantity: 1,
-          });
-        })
-        .catch((err) => {
-          console.log(err);
+
+  componentDidMount() {
+    axios
+      .get('/api' + this.props.location.pathname)
+      .then((res) => {
+        this.setState({
+          product: res.data,
+          clicked: '/' + res.data.imagePaths[0],
+          quantity: 1,
         });
-    }
-  };
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 
   changeQuantity = (operation) => {
     if (operation === '+') {
@@ -51,16 +50,6 @@ class ProductPage extends Component {
       }
     }
   };
-
-  componentWillMount() {
-    this.unlisten = this.props.history.listen((location, action) => {
-      this.updateData(location.pathname);
-    });
-  }
-
-  componentDidMount() {
-    this.updateData(this.props.location.pathname);
-  }
 
   render() {
     if (this.state.product === null) return <div />;

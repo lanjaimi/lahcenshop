@@ -8,15 +8,7 @@ const latestRouter = require('./routes/latest');
 const randomRouter = require('./routes/random');
 const mongoose = require('mongoose');
 const path = require('path');
-
-/// bucketeer config
-
-//mongodb+srv://lahcen:<password>@devconnector-t8z8k.mongodb.net/<dbname>?retryWrites=true&w=majority
-
-//const url = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/market_place';
-const url =
-  process.env.MONGODB_URI ||
-  'mongodb+srv://lahcen:246810@devconnector-t8z8k.mongodb.net/<dbname>?retryWrites=true&w=majority';
+const url = require('./config');
 
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 

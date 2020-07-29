@@ -12,31 +12,19 @@ class SearchPage extends Component {
     };
   }
 
-  updateData = (pathname, search) => {
-    if (pathname.includes('/search'))
-      axios
-        .get('/api' + pathname + search)
-        .then((res) => {
-          this.setState({
-            result: res.data,
-          });
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-  };
-
-  componentWillMount() {
-    this.unlisten = this.props.history.listen((location, action) => {
-      this.updateData(location.pathname, location.search);
-      this.setState({
-        searchQuery: location.search.replace('?query=', ''),
-      });
-    });
-  }
-
   componentDidMount() {
-    this.updateData(this.props.location.pathname, this.props.location.search);
+    const searchQuery = this.props.location.search.replace('?query=', '');
+    axios
+      .get('/api/' + this.props.location.pathname + this.props.location.search)
+      .then((res) => {
+        this.setState({
+          result: res.data,
+          searchQuery,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   render() {
