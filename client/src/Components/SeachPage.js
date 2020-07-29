@@ -36,17 +36,17 @@ class SearchPage extends Component {
           </div>
         </Fragment>
       );
+    } else {
+      let products = this.state.result.map((data, index) => {
+        return <SingleProduct key={index} data={data} />;
+      });
+
+      return (
+        <div className='countainer'>
+          <div className='row'>{products}</div>
+        </div>
+      );
     }
-
-    let products = this.state.result.map((data, index) => {
-      return <SingleProduct key={index} data={data} />;
-    });
-
-    return (
-      <div className='countainer'>
-        <div className='row'>{products}</div>
-      </div>
-    );
   }
 }
 
