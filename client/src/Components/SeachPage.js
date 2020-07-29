@@ -28,6 +28,7 @@ class SearchPage extends Component {
   }
 
   render() {
+    console.log(this.state.result);
     if (this.state.result.length === 0) {
       return (
         <Fragment>
