@@ -16,8 +16,9 @@ class SearchPage extends Component {
     const searchQuery = this.props.location.search.replace('?q=', '');
 
     axios
-      .get(this.props.location.pathname + this.props.location.search)
+      .get('/api' + this.props.location.pathname + this.props.location.search)
       .then((res) => {
+        console.log(res.data);
         this.setState({
           result: res.data,
           searchQuery,

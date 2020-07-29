@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const Product = require('../models/Product');
 
-router.get('/search', async (req, res) => {
+router.get('/api/search', async (req, res) => {
   try {
     await Product.find(
       {
