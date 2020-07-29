@@ -7,7 +7,7 @@ class SearchPage extends Component {
     super(props);
 
     this.state = {
-      result: null,
+      result: [],
       searchQuery: '',
     };
   }
@@ -28,7 +28,7 @@ class SearchPage extends Component {
   }
 
   render() {
-    if (this.state.result === null || this.state.result.length === 0) {
+    if (this.state.result.length === 0) {
       return (
         <Fragment>
           <div className='no_items_msg'>
